@@ -59,7 +59,7 @@ void Indium::init(const char** additionalExtensions, size_t additionalExtensionC
 		}
 	}
 
-	if (!foundValidationLayer) {
+	if (enableValidation && !foundValidationLayer) {
 		std::cerr << "Validation layer requested but not available. Ignoring..." << std::endl;
 		enableValidation = false;
 	}
